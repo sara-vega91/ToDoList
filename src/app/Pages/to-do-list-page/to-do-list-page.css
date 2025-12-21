@@ -1,0 +1,47 @@
+
+
+mat-card-title{
+    grid-area: title;
+    font-weight: bold;
+    text-align: center;
+}
+
+.todolist-page{
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    grid-template-areas: 
+        "title title"
+        "left right";
+    gap: 1rem;
+    padding: 1rem;    
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.left-column{
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+.right-column{
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+}
+
+/*  -- RESPONSIVE -- */
+@media(max-width: 768px){
+    .todolist-page{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "title"
+            "left"
+    }
+}
+
+    

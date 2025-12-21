@@ -1,0 +1,31 @@
+<mat-card class="navBar-card">
+  <!-- SELECTED DAY -->
+  <div class="date-row">
+    <mat-icon> calendar_today</mat-icon>
+    <span class="date-text">MOCK - sábado, 13 de diciembre de 2025</span>
+  </div>
+
+  <!-- ROOMS CARRUSEL -->
+  <div class="rooms-carrusel">
+    <button mat-icon-button (click)="prevRoom()" [disabled]="currentIndex === 0">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+
+    <!-- carrusel -->
+    <div class="rooms-window">
+      <div class="rooms-track">
+        @for (carrusel of visibleRooms; track carrusel) {
+        <div class="room-chip">{{ carrusel }}</div>
+        }
+      </div>
+    </div>
+
+    <button
+      mat-icon-button
+      (click)="nextRoom()"
+      [disabled]="currentIndex + VISIBLE_COUNT >= rooms.length"
+    >
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</mat-card>

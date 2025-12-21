@@ -1,0 +1,31 @@
+<mat-card class="calendar-card">
+  <!-- main title -->
+  <mat-card-header>
+    <mat-card-title>CALENDAR</mat-card-title>
+  </mat-card-header>
+
+  <!-- calendar header -->
+  <div class="calendar-header">
+    <!-- previous month arrow-->
+    <button mat-icon-button (click)="goToPreviousMonth()">
+      <mat-icon> arrow_back</mat-icon>
+    </button>
+    <div class="month-name">December 2025</div>
+    <button mat-icon-button (click)="goToNextMonth()">
+      <mat-icon> arrow_forward</mat-icon>
+    </button>
+  </div>
+
+  <!-- Calendar grid -->
+  <div class="calendar-grid">
+    <!-- Header dayName -->
+    @for (day of dayNames; track $index) {
+    <div class="day-header">{{ day }}</div>
+    }
+
+    <!-- Month days -->
+    @for (day of daysGrid; track $index) {
+    <div class="day-cell">{{ day }}</div>
+    }
+  </div>
+</mat-card>
