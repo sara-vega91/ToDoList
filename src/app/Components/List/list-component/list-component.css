@@ -5,6 +5,19 @@
     gap: 0.75rem;
 }
 
+.task-filter{
+  border: 2px solid black;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.searchIcon{
+  margin-left: auto;
+  cursor: pointer;
+}
+
 
 .task-counter{
     text-align: end;

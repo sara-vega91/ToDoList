@@ -13,7 +13,7 @@ export class DateNavBarComponent implements OnInit{
   rooms: string[] = ['Cocina','Salón', 'Recibidor', 'Patio', 'Terraza', 'Cuarto de baño - dormitorio', 'Aseo', 'Dormitorio principal', 'Dormitorio secundario', 'Despacho', 'Lavadero'];
   visibleRooms: string[] = [];
 
-  readonly VISIBLE_COUNT = 3;
+  readonly VISIBLE_COUNT = 4;
   currentIndex = 0;
   
 

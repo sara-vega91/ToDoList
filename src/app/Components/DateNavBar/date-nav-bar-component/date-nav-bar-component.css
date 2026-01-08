@@ -27,7 +27,8 @@
 }
 
 .date-text{
-    text-align: center;
+    display: flex;
+    
 }
 
 .rooms-window{

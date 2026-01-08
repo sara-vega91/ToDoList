@@ -1,10 +1,11 @@
 
 export interface TaskModel{
     idTask: number;
-    askName: string;
+    room: string;
+    taskTitle: string;
     checked: boolean;
     description?: string;
-    createdAt: Date;
+    week: string;
 }
 
 export interface Room{

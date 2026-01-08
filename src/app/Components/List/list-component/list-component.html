@@ -10,28 +10,35 @@
 
   <!-- CONTENT -->
   <mat-card-content>
-    <div class="task-filter">FILTER</div>
+    <div class="task-filter">
+      FILTER
+      <mat-icon class="searchIcon" fontIcon="search"></mat-icon>
+    </div>
 
     <div class="task-counter">Mock - 2 / 6 task done</div>
 
     <div class="tasks-container">
       <!-- TASK -->
       <div class="task-item">
-        <ul>
-          <!--@for(){ -->
-          <li>task</li>
+        @for(t of task; track t.idTask){
 
-          <mat-card-actions class="task-actions">
-            <mat-slide-toggle class="toggleChecked" labelPosition="before"
-              >Checked</mat-slide-toggle
-            >
-            <mat-icon class="infoIcon" fontIcon="info"></mat-icon>
-            <mat-icon class="editIcon" fontIcon="edit"></mat-icon>
-            <mat-icon class="removeIcon" fontIcon="remove"> </mat-icon>
-          </mat-card-actions>
+        <!-- INFO -->
+        <div class="task-info">
+          <span class="task-title">
+            {{ t.taskTitle }}
+          </span>
+        </div>
 
-          <!--}-->
-        </ul>
+        <!-- ACTIONS -->
+        <mat-card-actions class="task-actions">
+          <mat-slide-toggle class="toggleChecked" labelPosition="before" [checked]="t.checked"
+            >Checked</mat-slide-toggle
+          >
+          <mat-icon class="infoIcon" fontIcon="info"></mat-icon>
+          <mat-icon class="editIcon" fontIcon="edit"></mat-icon>
+          <mat-icon class="removeIcon" fontIcon="remove"> </mat-icon>
+        </mat-card-actions>
+        }
       </div>
     </div>
   </mat-card-content>
