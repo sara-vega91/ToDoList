@@ -31,7 +31,11 @@
 
         <!-- ACTIONS -->
         <mat-card-actions class="task-actions">
-          <mat-slide-toggle class="toggleChecked" labelPosition="before" [checked]="t.checked"
+          <mat-slide-toggle
+            class="toggleChecked"
+            labelPosition="before"
+            (change)="toggleTask(task)"
+            [checked]="t.checked"
             >Checked</mat-slide-toggle
           >
           <mat-icon class="infoIcon" fontIcon="info"></mat-icon>

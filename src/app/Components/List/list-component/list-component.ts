@@ -46,4 +46,9 @@ export class ListComponent {
     }
   ]
 
+  toggleTask(task: any){
+    task.completed = !task.completed;
+
+  }
+
 }
