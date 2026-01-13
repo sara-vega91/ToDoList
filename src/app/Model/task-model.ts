@@ -1,7 +1,7 @@
 
 export interface TaskModel{
     idTask: number;
-    room: string;
+    roomId: number;
     taskTitle: string;
     checked: boolean;
     description?: string;
@@ -11,6 +11,5 @@ export interface TaskModel{
 export interface Room{
     id: number;
     roomName: string;
-    tasks: string[];
 
 }
